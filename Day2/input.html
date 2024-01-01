@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script>
+           function calculate(){
+            console.log("Calculate fun called")
+            let x =parseInt(document.getElementById("n1").value)
+            let y = parseInt(document.getElementById("n2").value)
+            let op = document.getElementById("operation").value
+
+            let result
+            switch(op)
+            {
+                case '+': result= x + y; break;
+                case '-': result= x - y; break;
+                case '*': result= x * y; break;
+                case '/': result= x / y; break;
+            }
+             let outputstr = `${x} ${op} ${y}= ${result}`
+            document.getElementById("sp1").innerHTML = outputstr
+
+           }
+
+        </script>
+    </head>
+    <body>
+        <pre>
+            Enter First Number: <input id="n1" type="number">
+            Enter Second Number: <input id="n2" type="number">
+            <select id="operation" onchange="calculate()">
+                <option value="">Select op</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <p>The result is <span id="sp1"></span></p>
+        </pre>
+    </body>
+</html>
