@@ -10,4 +10,13 @@ function Welcome() {
   )
 }
 
+export function Greeting()
+{
+    return(
+        <p>
+            Good Night!!!!
+        </p>
+    )
+}
+
 export default Welcome
